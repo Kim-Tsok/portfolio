@@ -17,11 +17,12 @@ const About = () => {
 
   return (
     <>
-      <div className="h-screen bg-[#eadfd8] flex items-center flex-col">
+      <div className="h-[30vh] bg-[#eadfd8] flex items-center flex-col">
         <motion.h2
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
           className="md:text-3xl text-[17px] mt-[4rem] mx-2 md:mx-0"
         >
           Crafting experiences with{" "}
@@ -33,6 +34,7 @@ const About = () => {
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
           className="w-[76%] lg:w-[50%] md:w-[65%] mt-8 text-[#bfa18e] text-sm md:text-base"
         >
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
