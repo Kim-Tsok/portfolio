@@ -1,5 +1,13 @@
 import { createClient } from "@/lib/supabase/server"
 
+
+interface Skill {
+  id: string
+  name: string
+  category: string
+  proficiency: string | null
+}
+
 export default async function SkillsSection() {
   const supabase = await createClient()
 
@@ -18,7 +26,7 @@ export default async function SkillsSection() {
       acc[skill.category].push(skill)
       return acc
     },
-    {} as Record<string, any[]>,
+    {} as Record<string, Skill[]>,
   )
 
   return (
